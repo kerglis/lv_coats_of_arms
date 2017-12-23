@@ -1,6 +1,8 @@
-.jumbotron
-  %h2= gettext "Welcome to %{name}", name: "Phoenix!"
-  %p.lead
-    A productive web framework that
-    %br
-    does not compromise speed and maintainability.
+.jumbotron{ data: "#{@random_city.name}" }
+  %h2
+    = @random_city.name
+
+%div{ align: "center" }
+  %ul.list-inline.list-unstyled
+    - for city <- @cities do
+      = render "city.html", city: city

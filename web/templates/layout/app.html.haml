@@ -5,18 +5,10 @@
     %meta{charset: "utf-8"}
     %meta{content: "IE=edge", :"http-equiv" => "X-UA-Compatible"}
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
-    %meta{content: "", name: "description"}
-    %meta{content: "", name: "author"}
     %title Hello LvCoatsOfArms!
     %link{href: "#{static_path(@conn, "/css/app.css")}", rel: "stylesheet"}
   %body
     .container
-      %header.header
-        %nav{role: "navigation"}
-          %ul.nav.nav-pills.pull-right
-            %li
-              %a{href: "http://www.phoenixframework.org/docs"} Get Started
-        %span.logo
       %p.alert.alert-info{role: "alert"}= get_flash(@conn, :info)
       %p.alert.alert-danger{role: "alert"}= get_flash(@conn, :error)
       %main{role: "main"}
