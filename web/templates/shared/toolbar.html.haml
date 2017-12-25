@@ -1,0 +1,10 @@
+%center
+  = link "Pārlādēt →", to: reload_link(@active_tab, @conn), class: "btn btn-default btn-xl"
+
+%footer
+  %ul.nav.nav-pills
+    %li{class: "#{city_class(@active_tab)}" }
+      = link "Pilsētas", to: home_path(@conn, :index)
+
+    %li{ class: "#{county_class(@active_tab)}" }
+      = link "Novadi", to: county_path(@conn, :index)

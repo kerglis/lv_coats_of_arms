@@ -13,5 +13,6 @@
       %p.alert.alert-danger{role: "alert"}= get_flash(@conn, :error)
       %main{role: "main"}
         = render @view_module, @view_template, assigns
+        = render LvCoatsOfArms.SharedView, "toolbar.html", active_tab: @active_tab, conn: @conn
 
     %script{src: "#{static_path(@conn, "/js/app.js")}"}
