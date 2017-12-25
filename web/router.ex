@@ -17,6 +17,7 @@ defmodule LvCoatsOfArms.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", HomeController, :index
+    get "/counties", CountyController, :index
   end
 
   # Other scopes may use custom stacks.

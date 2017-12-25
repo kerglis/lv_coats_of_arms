@@ -1,0 +1,8 @@
+.jumbotron{ data: "#{@random_county.name}" }
+  %h2
+    = @random_county.name
+
+%div{ align: "center" }
+  %ul.list-inline.list-unstyled
+    - for county <- @counties do
+      = render "county.html", county: county
